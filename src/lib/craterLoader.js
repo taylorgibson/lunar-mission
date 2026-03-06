@@ -2,7 +2,7 @@ import { FALLBACK_CRATERS, CD_MIN } from './constants.js';
 
 export async function loadCraters() {
   try {
-    const response = await fetch('/data.csv');
+    const response = await fetch(`${import.meta.env.BASE_URL}data.csv`);
     const text = await response.text();
     const lines = text.trim().split('\n');
     const craters = [];

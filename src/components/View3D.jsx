@@ -200,7 +200,7 @@ function View3D({ oparams, params }) {
 
   const texture = useMemo(() => {
     const loader = new THREE.TextureLoader();
-    const tex = loader.load('/moon_texture.png');
+    const tex = loader.load(`${import.meta.env.BASE_URL}moon_texture.png`);
     tex.colorSpace = THREE.SRGBColorSpace;
     return tex;
   }, []);

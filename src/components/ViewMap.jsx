@@ -10,7 +10,7 @@ function ViewMap({ oparams, params, craters, timestamps }) {
   useEffect(() => {
     const img = new Image();
     img.onload = () => setMoonImg(img);
-    img.src = '/moon_texture.png';
+    img.src = `${import.meta.env.BASE_URL}moon_texture.png`;
   }, []);
 
   useEffect(() => {
